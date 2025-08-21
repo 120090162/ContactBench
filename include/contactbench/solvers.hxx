@@ -303,8 +303,8 @@ void DualBaseSolver<T, C>::vjp_fd(ContactProblem<T, C> &prob,
 #ifdef DIFFCONTACT_WITH_CPPAD
 template <typename T, template <typename> class C>
 void DualBaseSolver<T, C>::vjp_cppad(ContactProblem<T, C> &prob,
-                                     ContactSolverSettings<T> &settings,
-                                     const Ref<const VectorXs> &dL_dlam) {
+                                     const Ref<const VectorXs> &dL_dlam,
+                                     ContactSolverSettings<T> &settings) {
   assert((std::is_same<T, double>::value &&
           "This function can only be used for scalar type double"));
   // This function is templated by the type T which should be double.
