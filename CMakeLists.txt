@@ -42,12 +42,12 @@ set(CMAKE_VERBOSE_MAKEFILE OFF)
 apply_default_apple_configuration()
 
 # Options
-option(BUILD_PYTHON_INTERFACE "Build the python bindings" ON)
-option(BUILD_WITH_AUTODIFF_SUPPORT "Build the library with the automatic differentiation support (via CppAD)" OFF)
+option(BUILD_PYTHON_INTERFACE "Build the python bindings" OFF)
+option(BUILD_WITH_AUTODIFF_SUPPORT "Build the library with the automatic differentiation support (via CppAD)" ON)
 option(GENERATE_PYTHON_STUBS "Generate the Python stubs associated to the Python library" OFF )
 option(ENABLE_TEMPLATE_INSTANTIATION "Template instantiation of the main library" ON)
-option(INITIALIZE_WITH_NAN "Initialize Eigen entries with NaN" OFF)
-option(CHECK_RUNTIME_MALLOC "Check if some memory allocations are performed at runtime" OFF)
+option(INITIALIZE_WITH_NAN "Initialize Eigen entries with NaN" ON)
+option(CHECK_RUNTIME_MALLOC "Check if some memory allocations are performed at runtime" ON)
 
 if(INITIALIZE_WITH_NAN)
   message(STATUS "Initialize with NaN all the Eigen entries.")
