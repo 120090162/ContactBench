@@ -75,6 +75,7 @@ endif(WIN32)
 
 # MAIN LIBRARY
 file(GLOB_RECURSE ${PROJECT_NAME}_HEADERS
+     ${PROJECT_SOURCE_DIR}/include/contactbench/*.hh
      ${PROJECT_SOURCE_DIR}/include/contactbench/*.hpp
      ${PROJECT_SOURCE_DIR}/include/contactbench/*.hxx)
 
